@@ -121,14 +121,18 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 
 # kubectl bash completion
-source <(kubectl completion bash)
-alias k=kubectl
-complete -F __start_kubectl k
+if [ -x "$(command -v kubectl)" ];then
+  source <(kubectl completion bash)
+  alias k=kubectl
+  complete -F __start_kubectl k
+fi
 
 # helm bash completion
-source <(helm completion bash)
-alias h=helm
-complete -F __start_helm h
+if [ -x "$(command -v helm)" ];then
+  source <(helm completion bash)
+  alias h=helm
+  complete -F __start_helm h
+fi
 
 # azure cli bash completion
 source <(curl -s https://raw.githubusercontent.com/Azure/azure-cli/dev/az.completion)
