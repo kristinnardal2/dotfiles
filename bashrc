@@ -124,6 +124,11 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 
+# minikube bash completion
+if [ -x "$(command -v minikube)" ];then
+  source <(minikube completion bash)
+fi
+
 # kubectl bash completion
 if [ -x "$(command -v kubectl)" ];then
   source <(kubectl completion bash)
