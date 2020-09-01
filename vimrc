@@ -7,25 +7,25 @@ filetype off
 " Install plug from https://github.com/junegunn/vim-plug and run :PluginInstall
 call plug#begin()
 
+" Git commands for vim
 Plug 'tpope/vim-fugitive'
 
+" Changes to what/how Vim show us things
 Plug 'vim-syntastic/syntastic'
-
-Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
-
 Plug 'frazrepo/vim-rainbow'
-
-Plug 'preservim/nerdtree'
-
 Plug 'airblade/vim-gitgutter'
-
 Plug 'itchyny/lightline.vim'
 
+" Extra IDE like functionality
+Plug 'preservim/nerdtree'
+Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
 
+" Completion
 Plug 'ycm-core/YouCompleteMe'
 
-Plug 'majutsushi/tagbar'
+" Better Go language support
+Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 
 call plug#end()
 
