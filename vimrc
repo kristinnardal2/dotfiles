@@ -133,6 +133,7 @@ let g:solarized_termtrans=1
 let g:go_fmt_command = "goimports"
 
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <SPACE> :YcmCompleter GetType<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
