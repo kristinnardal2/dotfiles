@@ -157,8 +157,8 @@ let g:rainbow_active = 1
 
 set foldlevelstart=20
 
-" Don't conceal anything from the user
-set conceallevel=0
+" Don't use indentLine for markdown files (indentLine sets conceallevel=2)
+let g:indentLine_fileTypeExclude = ['markdown']
 
 "" Autocmd for filetypes
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
