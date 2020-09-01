@@ -51,6 +51,7 @@ set ruler
 " set visualbell
 
 " Encoding
+set fileencodings=utf-8
 set encoding=utf-8
 
 " Whitespace
@@ -95,6 +96,9 @@ set ignorecase
 set smartcase
 set showmatch
 map <leader><space> :let @/=''<cr> " clear search
+
+" Display all matching files when we tab complete
+set wildmenu
 
 " Remap help key.
 inoremap <F1> <ESC>:set invfullscreen<CR>a
