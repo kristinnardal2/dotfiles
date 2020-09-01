@@ -151,4 +151,4 @@ source <(curl -s https://raw.githubusercontent.com/Azure/azure-cli/dev/az.comple
 
 # some git aliases
 # Requires $ git config --global alias.root 'rev-parse --show-toplevel'
-alias groot="cd $(git root)"
+alias groot='cd $(git root)'
