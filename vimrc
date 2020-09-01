@@ -153,6 +153,8 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 " Custom options for yamllint are stored in ~/.config/yamllint/config
 " let g:ale_yaml_yamllint_options='-d relaxed'
 
+let g:rainbow_active = 1
+
 set foldlevelstart=20
 
 " Don't conceal anything from the user
