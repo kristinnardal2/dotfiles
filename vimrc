@@ -15,6 +15,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'frazrepo/vim-rainbow'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'pedrohdz/vim-yaml-folds'
+Plug 'Yggdroot/indentLine'
 
 " Extra IDE like functionality
 Plug 'preservim/nerdtree'
@@ -149,3 +151,11 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 
 " Custom options for yamllint are stored in ~/.config/yamllint/config
 " let g:ale_yaml_yamllint_options='-d relaxed'
+
+set foldlevelstart=20
+
+" Don't conceal anything from the user
+set conceallevel=0
+
+"" Autocmd for filetypes
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
