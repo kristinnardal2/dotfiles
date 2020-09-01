@@ -21,8 +21,9 @@ Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
 
-" Completion
+" Completion and linting
 Plug 'ycm-core/YouCompleteMe'
+Plug 'dense-analysis/ale'
 
 " Better Go language support
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
@@ -145,3 +146,6 @@ let g:lightline = {
       \ }
 
 let g:ycm_autoclose_preview_window_after_insertion=1
+
+" Custom options for yamllint are stored in ~/.config/yamllint/config
+" let g:ale_yaml_yamllint_options='-d relaxed'
