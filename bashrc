@@ -8,6 +8,9 @@ case $- in
       *) return;;
 esac
 
+# Get environment variables from /etc/environment
+source /etc/environment
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
