@@ -30,6 +30,9 @@ Plug 'dense-analysis/ale'
 " Better Go language support
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 
+" Terraform language support
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 
 " Turn on syntax highlighting
@@ -162,3 +165,7 @@ let g:indentLine_fileTypeExclude = ['markdown']
 
 "" Autocmd for filetypes
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Terraform options
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
