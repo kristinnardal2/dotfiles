@@ -184,3 +184,8 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " Terraform options
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+" quickfix list navigation
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
