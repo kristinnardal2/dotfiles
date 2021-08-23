@@ -132,8 +132,20 @@ let g:solarized_termtrans=1
 " in ~/.vim/colors/ and uncomment:
 " colorscheme solarized
 
+" Leader commands for go applications
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
+
 " Run goimports on save to go file
 let g:go_fmt_command = "goimports"
+
+" Run golangci-lint on save
+let g:go_metalinter_command='golangci-lint'
+let g:go_metalinter_enabled = []
+let g:go_metalinter_autosave=1
+let g:go_metalinter_autosave_enabled=[]
 
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <SPACE> :YcmCompleter GetType<CR>
@@ -155,6 +167,9 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 
 " Custom options for yamllint are stored in ~/.config/yamllint/config
 " let g:ale_yaml_yamllint_options='-d relaxed'
+"
+" Disable ale linting for go files, we use vim-go and golangci-lint instead
+let g:ale_linters = { 'go': [] }
 
 let g:rainbow_active = 1
 
