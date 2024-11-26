@@ -54,6 +54,10 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
+" Language
+set langmenu=en_US
+let $LANG = 'en_US'
+
 " TODO: Pick a leader key
 " let mapleader = ","
 
