@@ -39,6 +39,10 @@ Plug 'towolf/vim-helm'
 " Cue syntax highlighting
 Plug 'jjo/vim-cue'
 
+" Better sorting
+Plug 'inkarkat/vim-ingo-library'
+Plug 'inkarkat/vim-AdvancedSorters'
+
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
