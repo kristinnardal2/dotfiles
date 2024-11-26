@@ -33,6 +33,9 @@ Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 " Terraform language support
 Plug 'hashivim/vim-terraform'
 
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 call plug#end()
 
 " Turn on syntax highlighting
