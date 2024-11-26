@@ -24,7 +24,7 @@ Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
 
 " Completion and linting
-Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe', {'frozen': 'true'}
 Plug 'dense-analysis/ale'
 
 " Better Go language support
