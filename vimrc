@@ -12,7 +12,7 @@ Plug 'tpope/vim-fugitive'
 
 " Changes to what/how Vim show us things
 Plug 'vim-syntastic/syntastic'
-Plug 'frazrepo/vim-rainbow'
+Plug 'osamuaoki/vim-spell-under'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'pedrohdz/vim-yaml-folds'
@@ -24,7 +24,7 @@ Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
 
 " Completion and linting
-Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe', {'frozen': 'true'}
 Plug 'dense-analysis/ale'
 
 " Better Go language support
@@ -33,6 +33,19 @@ Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 " Terraform language support
 Plug 'hashivim/vim-terraform'
 
+" Helm syntax highlighting
+Plug 'towolf/vim-helm'
+
+" Cue syntax highlighting
+Plug 'jjo/vim-cue'
+
+" Better sorting
+Plug 'inkarkat/vim-ingo-library'
+Plug 'inkarkat/vim-AdvancedSorters'
+
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 call plug#end()
 
 " Turn on syntax highlighting
@@ -40,6 +53,10 @@ syntax on
 
 " For plugins to load correctly
 filetype plugin indent on
+
+" Language
+set langmenu=en_US
+let $LANG = 'en_US'
 
 " TODO: Pick a leader key
 " let mapleader = ","
@@ -130,7 +147,7 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
-" colorscheme solarized
+colorscheme solarized
 
 " Leader commands for go applications
 autocmd FileType go nmap <leader>b <Plug>(go-build)
@@ -169,7 +186,15 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 " let g:ale_yaml_yamllint_options='-d relaxed'
 "
 " Disable ale linting for go files, we use vim-go and golangci-lint instead
-let g:ale_linters = { 'go': [] }
+let g:ale_linters = {
+\   'go': [],
+\   'markdown': ['markdownlint'],
+\}
+let g:ale_markdown_markdownlint_options="--config /Users/kristinn/.markdownlintrc"
+
+" Ale linter navigation
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:rainbow_active = 1
 
