@@ -12,7 +12,6 @@ Plug 'tpope/vim-fugitive'
 
 " Changes to what/how Vim show us things
 Plug 'vim-syntastic/syntastic'
-Plug 'frazrepo/vim-rainbow'
 Plug 'osamuaoki/vim-spell-under'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
