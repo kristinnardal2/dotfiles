@@ -169,7 +169,15 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 " let g:ale_yaml_yamllint_options='-d relaxed'
 "
 " Disable ale linting for go files, we use vim-go and golangci-lint instead
-let g:ale_linters = { 'go': [] }
+let g:ale_linters = {
+\   'go': [],
+\   'markdown': ['markdownlint'],
+\}
+let g:ale_markdown_markdownlint_options="--config /Users/kristinn/.markdownlintrc"
+
+" Ale linter navigation
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:rainbow_active = 1
 
