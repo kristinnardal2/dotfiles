@@ -103,6 +103,7 @@ export KUBECTL_EXTERNAL_DIFF="dyff between --omit-header --set-exit-code"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
