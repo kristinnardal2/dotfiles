@@ -107,5 +107,3 @@ export KUBECTL_EXTERNAL_DIFF="dyff between --omit-header --set-exit-code"
 alias vim="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-source /Users/kristinn/.docker/init-zsh.sh || true # Added by Docker Desktop
