@@ -31,6 +31,9 @@ else
 endif
 Plug 'dense-analysis/ale'
 
+" Go debugging with delve
+Plug 'sebdah/vim-delve'
+
 " Better Go language support
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 
@@ -225,6 +228,10 @@ if has('nvim')
 endif
 if !has('nvim')
   nnoremap <SPACE> :YcmCompleter GetType<CR>
+endif
+
+if has('nvim')
+  let g:delve_backend = "native"
 endif
 
 nmap <F8> :TagbarToggle<CR>

@@ -78,6 +78,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin/:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$HOME/go/bin:$PATH"
 
 export ACR_NAME=snowregistry
 export KUBECTL_EXTERNAL_DIFF="dyff between --omit-header --set-exit-code"
